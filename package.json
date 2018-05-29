@@ -1,0 +1,43 @@
+{
+  "name": "visualising-enterprise-data-js",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch"
+  },
+  "private": true,
+  "dependencies": {
+    "ag-grid": "^17.1.1",
+    "ag-grid-enterprise": "^17.1.1",
+    "d3": "^4.13.0",
+    "d3-selection-multi": "^1.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "@types/d3": "^5.0.0",
+    "@types/underscore": "^1.8.7",
+    "rxjs": "^5.5.6",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.5.3",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "description": "Visualising Enterprise Data with JavaScript and D3",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanlandsman/visualising-enterprise-data-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "grid",
+    "enterprise",
+    "d3"
+  ],
+  "author": "Sean Landsman <sean@thelandsmans.com>",
+  "bugs": {
+    "url": "https://github.com/seanlandsman/visualising-enterprise-data-js/issues"
+  },
+  "homepage": "https://github.com/seanlandsman/visualising-enterprise-data-js#readme"
+}
