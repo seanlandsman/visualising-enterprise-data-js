@@ -11,12 +11,11 @@ export abstract class D3ChartComponent {
 
     protected margin = {
         top: 25,
-        right: 100,
-        bottom: 85,
-        left: 0
+        right: 15,
+        bottom: 15,
+        left: 25
     };
 
-    protected padding = 40;
     protected colourScale: any = D3.scaleOrdinal(D3.schemeCategory10);
 
     protected chartDataChangedSubscription: Subscription;
@@ -48,9 +47,10 @@ export abstract class D3ChartComponent {
         this.svg = this.host.append('svg')
             .attr('width', this.width)
             .attr('height', this.height)
-            .style('padding-top', this.padding - 10)
-            .style('padding-left', this.padding)
-            .style('padding-bottom', this.padding);
+            .style('margin-top', this.margin.top)
+            .style('margin-left', this.margin.left)
+            .style('margin-bottom', this.margin.bottom)
+            .style('margin-right', this.margin.right);
     }
 
     protected abstract render(): void;
