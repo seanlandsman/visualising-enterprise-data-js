@@ -10,9 +10,9 @@ export abstract class D3ChartComponent {
     protected host: any;
 
     protected margin = {
-        top: 25,
+        top: 55,
         right: 15,
-        bottom: 15,
+        bottom: 55,
         left: 25
     };
 
@@ -46,7 +46,7 @@ export abstract class D3ChartComponent {
         this.host.html('');
         this.svg = this.host.append('svg')
             .attr('width', this.width)
-            .attr('height', this.height)
+            .attr('height', this.height + 30)
             .style('margin-top', this.margin.top)
             .style('margin-left', this.margin.left)
             .style('margin-bottom', this.margin.bottom)

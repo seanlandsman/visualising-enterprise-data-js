@@ -1,66 +1,65 @@
 <!--suppress ALL -->
 <html>
 <head>
-  <script src="d3.min.js"></script>
-  <style>
-    /*body {*/
-    /*margin: 0;*/
-    /*}*/
+    <script src="d3.min.js"></script>
+    <style>
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 150px;
-      background-color: green;
-    }
-  </style>
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
 <div class="row">
-  <div id="first" class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
+    <div id="first" class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
 </div>
 
 <script>
-  var numbers = [2, 4, 6, 8, 10];
-  let circles = d3.select(".row")
-    .selectAll(".circle")
-    .data(numbers)
-    .style("height", (data) => {
-      return (data * 50) + "px";
-    })
-    .style("width", (data) => {
-      return (data * 50) + "px";
-    })
-    .style("border-radius", (data) => {
-      return (data * 50) / 2 + "px";
-    })
-    .style("margin-top", (data) => {
-      return (500 - (data * 50)) + "px";
-    })
+    // part 1
+    var numbers = [2, 4, 6, 8, 10];
+    let circles = d3.select(".row")
+        .selectAll(".circle")
+        .data(numbers)
+        // part 2
+        .style("height", (data) => {
+            return (data * 50) + "px";
+        })
+        .style("width", (data) => {
+            return (data * 50) + "px";
+        })
+        .style("border-radius", (data) => {
+            return (data * 50) / 2 + "px";
+        })
+        .style("margin-top", (data) => {
+            return (500 - (data * 50)) + "px";
+        })
 
-  circles.enter()
-    .append("div")
-    .attr("class", "circle")
-    .style("height", (data) => {
-      return (data * 50) + "px";
-    })
-    .style("width", (data) => {
-      return (data * 50) + "px";
-    })
-    .style("border-radius", (data) => {
-      return (data * 50) / 2 + "px";
-    })
-    .style("margin-top", (data) => {
-      return (500 - (data * 50)) + "px";
-    })
+    // part 3
+    circles.enter()
+      .append("div")
+      .attr("class", "circle")
+      .style("height", (data) => {
+        return (data * 50) + "px";
+      })
+      .style("width", (data) => {
+        return (data * 50) + "px";
+      })
+      .style("border-radius", (data) => {
+        return (data * 50) / 2 + "px";
+      })
+      .style("margin-top", (data) => {
+        return (500 - (data * 50)) + "px";
+      })
 </script>
 </body>
 </html>
